@@ -1,0 +1,113 @@
+.filters {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 510px;
+  }
+  
+  ::ng-deep {
+    .mat-form-field-infix {
+      background-color: #84e8f3;
+    }
+  
+    .mat-select-value,
+    .mat-select-arrow,
+    .mat-form-field.mat-focused ,
+    .mat-form-field-hide-placeholder .mat-select-placeholder,
+    .mat-form-field-appearance-legacy .mat-form-field-label {
+      color: #755927 !important;
+      opacity: 1;
+    }
+  
+    .mat-form-field-infix {
+      border-color: #755927 !important;
+      border-top: none;
+      padding-left: 5px !important;
+    }
+  
+    .mat-form-field-appearance-legacy .mat-form-field-label {
+      padding-left: 5px;
+    }
+  
+    .mat-form-field-appearance-legacy .mat-form-field-underline {
+      background-color: #755927 !important;
+    }
+  }
+
+  .recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+
+  mat-progress-spinner {
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+
+  .recipe {
+  width: 205px;
+  margin: 10px;
+  height: 310px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #84e8f3;
+  box-shadow: 4px 3px 8px 0px rgb(200 152 44 / 22%);
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 4px 3px 11px 6px rgb(117 89 39 / 86%);
+    transform: translateY(-3px);
+  }
+
+  &-thumb-container {
+    background-color: #84e8f3;
+    position: relative;
+    height: 172px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 210px;
+  }
+
+  &-description {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 157px;
+  }
+
+  &-name {
+    color: #755927;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &-cuisine {
+    color: #755927;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

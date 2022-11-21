@@ -1,0 +1,158 @@
+
+  
+  <div class="filters">
+    <mat-form-field>
+      <mat-label>Some Recipe Ideas</mat-label>
+      <mat-select
+        panelClass="sort-select"
+        [(ngModel)]="search"
+        (selectionChange)="searchRecipes(search)">
+        <mat-option value="romanian">Romanian</mat-option>
+        <mat-option value="pork">Pork</mat-option>
+        <mat-option value="beef">Beef</mat-option>
+        <mat-option value="chicken">Chicken</mat-option>
+        <mat-option value="lamb">Lamb</mat-option>
+        <mat-option value="fish">Fish</mat-option>
+        <mat-option value="vegan">Vegan</mat-option>
+        <mat-option value="vegetarian">Vegetarian</mat-option>
+        <mat-option value="dessert">Dessert</mat-option>
+        <mat-option value="snack">Snack</mat-option>
+        <mat-option value="breakfast">Breakfast</mat-option>
+        <mat-option value="pizza">Pizza</mat-option>
+        <mat-option value="pasta">Pasta</mat-option>
+        <mat-option value="italian">Italian</mat-option>
+        <mat-option value="indian">Indian</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div *ngIf="loaderService.isLoading | async">
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+  </div>
+
+  <div class="recipes"  [@listAnimation]="recipes">  
+    <ng-container *ngFor="let item of recipes;">
+      <div class="recipe" (click)="openDialog(item.recipe)" >
+        <div class="recipe-thumb-container">
+          <img
+            src="{{ item.recipe.image }}"
+            alt="thumbnail"
+            class="recipe-thumbnail"
+          />
+          <p *ngIf="!item.recipe.image">No image</p>
+        </div>
+        <div class="recipe-description">
+          <p class="recipe-name">{{ item.recipe.label }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+<div class="search-container">
+    <form class="search-form" #form="ngForm" (ngSubmit)="homeSearchRecipes(form.value.search)">
+      <span class="logo" routerLink="/">FindARecipe</span>
+      <input
+        class="search-input"
+        name="search"
+        ngModel
+        placeholder="Search for a recipe"
+      />
+      <button class="search-button">Search</button>
+      <button class="favorites" routerLink="favorites">Favorites</button>
+    </form>
+</div>
+  
+
+
+
+
+
+
+
+
+

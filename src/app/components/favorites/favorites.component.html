@@ -1,0 +1,21 @@
+<div class="recipes"  [@listAnimation]="favorites.length">  
+    <ng-container *ngFor="let item of favorites;">
+      <div class="recipe"  >
+        <div class="recipe-thumb-container">
+          <img
+            src="{{ item.image }}"
+            alt="thumbnail"
+            class="recipe-thumbnail"
+          />
+          <p *ngIf="!item.image">No image</p>
+        </div>
+        <div class="recipe-description">
+          <p class="recipe-name">{{ item.label }}</p>
+          <button class="recipe-button" (click)="deleteRecipe(item.id)">Remove form Favorites</button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+
+  <!-- (click)="openDialog(item.recipe)" -->

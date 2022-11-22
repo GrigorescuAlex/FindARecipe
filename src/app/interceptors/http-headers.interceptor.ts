@@ -15,11 +15,11 @@ export class HttpHeadersInterceptor implements HttpInterceptor {
     this.loaderService.isLoading.next(true)
     request = request.clone({
       setHeaders: {
-        'apiKey': 'ed6eaca4437257c5904882d1b4120c67',
+        'apiKey': '...',
         'apiURL': 'https://api.edamam.com/api/recipes/v2?type=public',
       },
       setParams: {
-        key: 'ed6eaca4437257c5904882d1b4120c67',
+        key: '...',
       }
     });
     return next.handle(request).pipe(
